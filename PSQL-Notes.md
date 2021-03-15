@@ -8,15 +8,17 @@ Check PSQL version -> psql --version
 
 Log into PSQL from your terminal -> psql -U postgres
 
-create a database -> REATE DATABASE (dbname);
-
-Create table (column) in a database -> CREATE TABLE (tableName);
-
 connect to a database -> \c (dbname)
 
 list all databases -> \l
 
 describe a table -> \d
+
+# SQL Queries
+
+create a database -> CREATE DATABASE (dbname);
+
+Create table (column) in a database -> CREATE TABLE (tableName);
 
 Selecting a table to view data -> SELECT \* FROM (tableName);
 
