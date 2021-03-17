@@ -1,4 +1,13 @@
-# PostgresQL Notes
+# PostgreSQL and SQL Notes
+
+What is PostgreSQL?
+Object-relational database management system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
+
+What is SQL?
+SQL stands for Structured Query Language
+A query language is a kind of programming language that's designed to facilitate retrieving specific information from databases
+
+# PostgreSQL Resources
 
 To Download PSQL: https://www.postgresql.org/download/
 
@@ -32,7 +41,7 @@ deleting a column on a table -> ALTER TABLE users DROP COLUMN age;
 
 renaming exisiting column -> ALTER TABLE users RENAME first_name TO firstName;
 
-Adding row -> example: INSERT INTO users (first_name, last_name, city, age) VALUES ('David', 'Beckham', 'Manchester', 40);
+Adding row/instance -> example: INSERT INTO users (first_name, last_name, city, age) VALUES ('David', 'Beckham', 'Manchester', 40);
 
 Updating row -> examplle: data=# UPDATE users SET first_name = 'david' WHERE id = 1;
 
