@@ -1,6 +1,6 @@
 Create a database called music
 
-Create a table called artists and add column parameters of serial id, artist_name, age and genre
+Create a table called artists and add column parameters of id, artist_name, age and genre
 
 Add 4 rows/instances to the table
 

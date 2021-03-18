@@ -1,11 +1,21 @@
 # PostgreSQL and SQL Notes
 
 What is PostgreSQL?
-Object-relational database management system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
+PostgreSQL is a relational database management system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 
 What is SQL?
 SQL stands for Structured Query Language
 A query language is a kind of programming language that's designed to facilitate retrieving specific information from databases
+
+What is a database?
+Organized collection of data, generally stored and accessed electronically from a computer system
+
+What is a Relational Database?
+A type of database that stores and provides access to data points that are related to one another.
+The columns of the table hold attributes of the data, and each record usually has a value for each attribute, making it easy to establish the relationships among data points.
+A software system used to maintain relational databases is called a relational database management system.
+
+ER Diagram -> visual of the relationships between the tables in a database
 
 # PostgreSQL Resources
 
@@ -19,34 +29,45 @@ Check PSQL version -> psql --version
 
 Log into PSQL from your terminal -> psql -U postgres
 
+quit out of psql -> \q
+
 connect to a database -> \c (dbname)
 
 list all databases -> \l
 
-describe a table -> \d
+describes a table and shows a list of the column parameters-> \d (table name)
+^ also helpful if you want to check the primary key and foreign key associations in the tables
+
+describes a table and shows a list of tables in the database -> \dt
 
 # SQL Queries
 
 create a database -> CREATE DATABASE (dbname);
 
-Create table (column) in a database -> CREATE TABLE (tableName);
+# Queries for Tables
 
-defining column variables -> CREATE TABLE users (id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255), city VARCHAR(225), age INT);
+Creating table and defining column parameters -> example: CREATE TABLE players (id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255), city VARCHAR(225), age INT);
 
-Selecting a table to view data -> SELECT \* FROM (tableName);
+Selecting a table to view data -> SELECT \* FROM table_name;
 
-adding a column to a table -> ALTER TABLE users ADD age INT;
+Editing table name -> ALTER TABLE old_table_name RENAME TO new_table_name;
 
-deleting a column on a table -> ALTER TABLE users DROP COLUMN age;
+Adding a column to a table -> ALTER TABLE table_name ADD add_column_parameter data_type;
 
-renaming exisiting column -> ALTER TABLE users RENAME first_name TO firstName;
+Deleting a column on a table -> ALTER TABLE table_name DROP COLUMN column_to_drop;
 
-Adding row/instance -> example: INSERT INTO users (first_name, last_name, city, age) VALUES ('David', 'Beckham', 'Manchester', 40);
+Renaming exisiting column -> ALTER TABLE table_name RENAME old_column_name TO new_column_name;
 
-Updating row -> examplle: data=# UPDATE users SET first_name = 'david' WHERE id = 1;
+Adding primary key after table is created -> ALTER TABLE table_name ADD PRIMARY KEY (ID);
 
-Deleting row -> DELETE FROM users WHERE id = 1;
+Adding foreign key to a table after a table is created -> ALTER TABLE table_name ADD FOREIGN KEY (name_of_foreign_key/id) REFERENCES table_name(id);
 
-Initializing primary key -> ALTER TABLE users ADD PRIMARY KEY (ID);
+# Queries for Rows/Instances
 
-Initializing foreign key -> ALTER TABLE emails ADD FOREIGN KEY (user_id) REFERENCES users(id);
+Adding row/instance -> example: INSERT INTO players (first_name, last_name, city, age) VALUES ('David', 'Beckham', 'Manchester', 40);
+
+Updating row -> example: UPDATE players SET first_name = 'david' WHERE id = 1;
+
+Deleting row -> DELETE FROM table_name WHERE id = id_associated_to_the_row;
+
+listing out instances that match the foreign key -> example: SELECT FROM table_name WHERE artist_id = 2
