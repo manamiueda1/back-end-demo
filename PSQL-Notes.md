@@ -7,6 +7,8 @@ What is SQL?
 SQL stands for Structured Query Language
 A query language is a kind of programming language that's designed to facilitate retrieving specific information from databases
 
+# Relational Database Notes
+
 What is a database?
 Organized collection of data, generally stored and accessed electronically from a computer system
 
@@ -16,6 +18,13 @@ The columns of the table hold attributes of the data, and each record usually ha
 A software system used to maintain relational databases is called a relational database management system.
 
 ER Diagram -> visual of the relationships between the tables in a database
+
+Primary key -> A primary key, also called a primary keyword, is a key in a relational database that is unique for each record. It is a unique identifier, such as a driver license number, telephone number (including area code), or vehicle identification number (VIN). A relational database must always have one and only one primary key.
+
+Foreign key -> A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
+
+Defining Relationships between tables in a database
+One-to-one relationship ->
 
 # PostgreSQL Resources
 
