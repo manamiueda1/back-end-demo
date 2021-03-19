@@ -24,7 +24,13 @@ Primary key -> A primary key, also called a primary keyword, is a key in a relat
 Foreign key -> A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
 
 Defining Relationships between tables in a database
-One-to-one relationship ->
+One-to-one relationship -> Both tables can have only one record on either side of the relationship. Each primary key value relates to only one (or no) record in the related table. Ex: in a school database, each student has only one student ID, and each student ID is assigned to only one person.
+
+One-to-many -> The primary key table contains only one record that relates to none, one, or many records in the related table. This relationship is similar to the one between you and a parent. Ex: in a university database, a dorm has many students, and each student lives in one dorm
+
+Many-to-many -> Each record in both tables can relate to any number of records (or no records) in the other table. ex: in a university example, a teacher can have many students and each student can have many teachers
+
+Join table -> A join table contains common fields from two or more other tables. In this way, it creates a many-to-many relationship between data
 
 # PostgreSQL Resources
 
