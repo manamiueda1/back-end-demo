@@ -39,6 +39,10 @@ To Download PSQL: https://www.postgresql.org/download/
 
 PSQL Documentation: https://www.postgresql.org/docs/13/index.html
 
+PSQL tutorials:
+https://www.tutorialspoint.com/postgresql/
+https://www.postgresqltutorial.com/postgresql-foreign-key/
+
 # PSQL Commands
 
 Check PSQL version -> psql --version
