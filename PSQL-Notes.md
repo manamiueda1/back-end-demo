@@ -24,6 +24,7 @@ Primary key -> A primary key, also called a primary keyword, is a key in a relat
 Foreign key -> A foreign key is a column or group of columns in a relational database table that provides a link between data in two tables. It acts as a cross-reference between tables because it references the primary key of another table, thereby establishing a link between them.
 
 Defining Relationships between tables in a database
+
 One-to-one relationship -> Both tables can have only one record on either side of the relationship. Each primary key value relates to only one (or no) record in the related table. Ex: in a school database, each student has only one student ID, and each student ID is assigned to only one person.
 
 One-to-many -> The primary key table contains only one record that relates to none, one, or many records in the related table. This relationship is similar to the one between you and a parent. Ex: in a university database, a dorm has many students, and each student lives in one dorm
@@ -61,11 +62,9 @@ create a database -> CREATE DATABASE (dbname);
 
 # Queries for Tables
 
-Creating table and defining column parameters -> example: CREATE TABLE players (id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255), city VARCHAR(225), age INT);
+Creating table and defining column parameters -> example: CREATE TABLE players (id SERIAL PRIMARY KEY, first_name VARCHAR, last_name VARCHAR, city VARCHAR, age INT);
 
 Selecting a table to view data -> SELECT \* FROM table_name;
-
-Editing table name -> ALTER TABLE old_table_name RENAME TO new_table_name;
 
 Adding a column to a table -> ALTER TABLE table_name ADD add_column_parameter data_type;
 

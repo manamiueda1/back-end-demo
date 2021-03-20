@@ -1,13 +1,15 @@
 Create a database called music
 
-Create a table called artists and add column parameters of id, artist_name, age and genre
+connect to the music database
 
-Add 4 rows/instances to the table
+Create a table called artists and add column parameters of serial id (primary key), artist_name, age and genre
 
-Make the serial id in the artists table a primary key
+Check if the table exists by useing SELECT \* FROM music
 
-Create a table called songs and add column parameters of serial id, song_name, downloads and artist_id
+Insert 4 rows/instances to the artists table
 
-Add 10 instances to the songs table
+Create a table called songs and add column parameters of serial id, song_name, downloads and artist_id (foreign key)
 
-Make the artist_id a foreign key to the primary key in the artists table
+Insert 10 instances to the songs table
+
+Select songs by artist
