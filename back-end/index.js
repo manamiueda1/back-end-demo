@@ -19,6 +19,8 @@ app.get("/", (request, response) => {
 });
 
 app.get("/songs", db.getSongs);
+app.get("/artists", db.getArtists);
+app.get("/artists/:id", db.getSongsbyArtists);
 
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
